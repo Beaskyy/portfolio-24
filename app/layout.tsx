@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./Provider";
+import ClientOnly from "@/components/client-only";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider
+        <ClientOnly>
+          <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             enableSystem
@@ -26,7 +28,8 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
-        </body>
+        </ClientOnly>
+      </body>
     </html>
   );
 }
