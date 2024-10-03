@@ -32,7 +32,7 @@ const Hero = () => {
             words="Transforming Concepts into Seamless User Experiences"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">Hi, I&apos;m Beasky, a Next.js Developer based in Nigeria.</p>
-          <a href="/about">
+          <a href="https://afeez.netlify.app/" target="_blank">
           <MagicButton title="Show my work" icon={<FaLocationArrow />} position="right" />
           </a>
         </div>
